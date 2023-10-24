@@ -29,7 +29,7 @@ const About = () => {
         <h2 className={`${styles.sectionHeadText}`}>Overview.</h2>
       </motion.div>
       <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        I am a skilled Full Stack Developer with expertise in various trending technologies such as React.js, Next.js, MongoDB, etc. I have built projects which showcases the skillset I have in these technologies. I am really good in adapting to the various technological trends and working with the latest technologies. I am open to work as a freelance web developer and help you start or boost your online business with the help of tech.
+        I am a skilled Full Stack Web Developer with expertise in various trending technologies such as React.js, Next.js, MongoDB, etc. I have built projects which showcases the skillset I have in these technologies. I am really good in adapting to the various technological trends and working with the latest technologies. I am open to work as a freelance web developer and help you start or boost your online business with the help of tech.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => {
