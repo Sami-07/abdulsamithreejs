@@ -13,9 +13,10 @@ function App() {
         <Tech />
         <Works />
         {/* <Feedbacks /> */}
-        <div className="relative z-0"></div>
+        <div className="relative z-0">
         <Contact />
         <StarsCanvas />
+        </div>
       </div>
     </BrowserRouter>
   );

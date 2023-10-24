@@ -1,6 +1,5 @@
 import {
   mobile,
-  backend,
   creator,
   web,
   javascript,
@@ -35,6 +34,10 @@ import sreyas from   "../assets/company/sreyas.png"
 import xstore from "../assets/xstore.png"
 import chaikathela from "../assets/chaikathela.png"
 import ahs from "../assets/ahs.png"
+import uiux from "../assets/uiux.png"
+import react from "../assets/react.png"
+import webdev from "../assets/webdev.png"
+import backend from "../assets/backend.png"
 export const navLinks = [
   {
     id: "about",
@@ -53,11 +56,11 @@ export const navLinks = [
 const services = [
   {
     title: "Web Developer",
-    icon: web,
+    icon: webdev,
   },
   {
     title: "React Developer",
-    icon: mobile,
+    icon: react,
   },
   {
     title: "Backend Developer",
@@ -65,7 +68,7 @@ const services = [
   },
   {
     title: "UI/UX Enthusiast",
-    icon: creator,
+    icon: uiux,
   },
 ];
 
@@ -114,10 +117,10 @@ const technologies = [
     name: "Firebase",
     icon: firebase,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
   {
     name: "git",
     icon: git,
