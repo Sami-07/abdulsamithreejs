@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 import heroImage from "../assets/heroImage.jpg"
 import { ComputersCanvas } from "./canvas";
+import Resume from "../assets/Resume.pdf"
 const Hero = () => {
   return (
     <section className='relative mt-20 md:mt-0 md:top-40 md:h-[75vh] '>
@@ -19,7 +20,8 @@ const Hero = () => {
           </div>
 
         </div>
-        <a download="" className='md:hidden'> <button className="bg-[#00A9FF] rounded-lg p-4" >Download Resume</button></a>
+        <a href={Resume} target="_blank"  rel="noopener noreferrer"
+          download="Abdul Sami's Resume" className='md:hidden'> <button className="bg-[#00A9FF] rounded-lg p-4" >Download Resume</button></a>
         <div className='flex justify-center'>
           <img src={heroImage} className=' rounded-full w-72 h-7w-72 mt-10 md:mt-0 ' />
         </div>
