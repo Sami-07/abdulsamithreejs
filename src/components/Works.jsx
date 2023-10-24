@@ -6,21 +6,16 @@ import { github } from '../assets'
 import { SectionWrapper } from '../hoc'
 import { projects } from '../constant'
 import { fadeIn, textVariant } from '../utils/motion'
-const ProjectCard = ({ index, name, description, tags, image, source_code_link,hosted_link }) => {
+import webicon from "../assets/web icon.png"
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, hosted_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt options={{ max: 45, scale: 1, speed: 450 }} className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
-        <div onClick={() => window.open(hosted_link, "_blank")} className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[230px]'>
           <img src={image}
             alt={name}
             className='w-full h-full object-cover rounded-2xl' />
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div onClick={() => window.open(source_code_link, "_blank")} className='black-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer'>
-              <img src={github}
-                alt='github'
-                className='w-1/2 h-1/2 object-contain' />
-            </div>
-          </div>
+
         </div>
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
@@ -32,6 +27,16 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link,h
               <p key={tag.name} className={`text-[14px] ${tag.color}`} >#{tag.name}</p>
             )
           })}
+        </div>
+        <div className='flex justify-center items-center gap-5'>
+
+
+          <button onClick={() => window.open(source_code_link, "_blank")} className='flex justify-center items-center gap-5 bg-black font-semibold mt-5 p-2 rounded-lg'> <img src={github}
+            alt='github'
+            className='w-10 h-10 object-contain' />GitHub</button>
+          <button onClick={() => window.open(hosted_link, "_blank")} className='flex justify-center items-center gap-5 bg-white font-semibold text-black mt-5 p-2 rounded-lg'> <img src={webicon}
+            alt='github'
+            className='w-8 h-8  object-contain' />Web App</button>
         </div>
       </Tilt>
     </motion.div>
