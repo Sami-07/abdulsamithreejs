@@ -4,30 +4,51 @@ import { styles } from "../style";
 import heroImage from "../assets/heroImage.jpg"
 import { ComputersCanvas } from "./canvas";
 import Resume from "../assets/Resume.pdf"
+
+
 const Hero = () => {
   return (
-    <section className='relative mt-20 md:mt-0 md:top-40 md:h-[75vh] '>
-      <div className='flex justify-center items-center flex-col md:flex-row'>
-        <div className={`${styles.paddingX} flex flex-row justify-center items-start gap-5`}>
-          <div className='flex flex-col justify-center items-center mt-5'>
-            <div className='w-5 h-5 rounded-full bg-[#00A9FF]' />
-            <div className='w-1 sm:h-80  h-40 blue-gradient' />
-          </div>
-          <div>
-            <h1 className={`${styles.heroHeadText}`}>Hi, I'm <span className='text-[#00A9FF]'> Abdul Sami</span></h1>
-            <p className={`${styles.heroSubText} mt-2 text-white-100`} >I develop full stack web applications.</p>
-            <a download="" className='hidden md:block'> <button className="bg-[#00A9FF] mt-5 rounded-lg p-4" >Download Resume</button></a>
-          </div>
-
+    <section className={`relative w-full h-screen mx-auto`}>
+      <div
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+      >
+        <div className='flex flex-col justify-center items-center mt-5'>
+          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
+          <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
-        <a href={Resume} target="_blank"  rel="noopener noreferrer"
-          download="Abdul Sami's Resume" className='md:hidden'> <button className="bg-[#00A9FF] rounded-lg p-4" >Download Resume</button></a>
-        <div className='flex justify-center'>
-          <img src={heroImage} className=' rounded-full w-72 h-7w-72 mt-10 md:mt-0 ' />
+
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi, I'm <span className='text-[#915EFF]'>Abdul Sami</span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            I develop Full Stack
+            web applications
+          </p>
         </div>
       </div>
-    </section>
-  )
-}
 
-export default Hero
+      <ComputersCanvas />
+
+      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+        <a href='#about'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className='w-3 h-3 rounded-full bg-secondary mb-1'
+            />
+          </div>
+        </a>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
